@@ -130,7 +130,7 @@
                         tapping-term-ms = <150>;
                         quick-tap-ms = <0>;
                         flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
+                        bindings = <&mo>, <&kp>;
                 };
                 td_caps: tap_dance_caps {
                         compatible = "zmk,behavior-tap-dance";
