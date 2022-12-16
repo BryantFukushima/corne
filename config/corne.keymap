@@ -17,10 +17,11 @@
 #define MED 6
 #define FNC 7
 
+&mt {
+        tapping-term-ms = <400>;
+};
+
 / {
-        &mt {
-                tapping-term-ms = <400>;
-        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -31,10 +32,10 @@
 // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | QWT  |
 //       | TAB/FNC | ESC/NUM | BKSP/NAV |   | SPC/SYM | ENT/MSE  | DEL/MED |
                         bindings = <
-   &kp TAB   &kp Q   &kp W   &kp F   &kp P   &kp B      &kp J   &kp L   &kp U   &kp Y   &kp SQT   &kp BSPC
-   &kp ESC   &mt LSHFT A   &mt LALT R   &mt LCTRL S   &mt LGUI T   &kp G        &kp M   &mt RGUI N   &mt RCTRL E   &mt RALT I   &mt RSHFT O   &kp SEMI
-   &kp LSHFT   &kp Z   &kp X   &kp C   &kp D   &kp V    &kp K   &kp H   &kp COMMA   &kp DOT   &kp FSLH   &to QWT
-                  &lt FNC SPACE   &lt NUM ESC   &lt NAV BSPC    &lt SYM SPACE   &lt MSE ENTER   &lt MED DEL
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SQT    &kp BSPC
+   &kp ESC &mt LSHFT A &mt LALT R &mt LCTRL S &mt LGUI T &kp G   &kp M &mt RGUI N  &mt RCTRL E  &mt RALT I   &mt RSHFT O &kp SEMI
+   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &to QWT
+                  &lt FNC SPACE &lt NUM ESC &lt NAV BSPC &lt SYM SPACE &lt MSE ENTER  &lt MED DEL
                         >;
                 };
                 symbols {
@@ -45,7 +46,7 @@
 //                        | = | _ | - |   | none | none  | none |
                         bindings = <
    &kp GRAVE  &kp LBRC &kp AMPS &kp ASTRK &kp PIPE &kp RBRC   &none &none  &none  &none  &none  &none
-   &kp TILDE &kp LPAR &kp DLLR &kp PRCNT &kp CARET &kp RPAR   &none &kp RGUI  &kp RCTRL  &kp RALT  &kp RSHFT &none
+   &kp TILDE &kp LPAR &kp DLLR &kp PRCNT &kp CARET &kp RPAR   &none &kp RGUI  &kp RCTRL  &kp RALT   &kp RSHFT &none
    &kp BSLH &kp LBKT &kp EXCL &kp AT &kp HASH &kp RBKT   &none &none  &none  &none  &none  &none
                          &kp EQUAL &kp UNDER &kp MINUS   &none &none &none
                         >;
@@ -73,6 +74,58 @@
    &none  &none  &none  &none  &none  &none    &none  &kp N7  &kp N8  &kp N9  &none  &none
    &none  &kp LSHFT  &kp LALT  &kp LCTRL  &kp LGUI  &none    &none  &kp N4  &kp N5  &kp N6  &kp DOT  &none
    &none  &none  &none  &none  &none  &none    &none  &kp N1  &kp N2  &kp N3  &none  &none
+                        &none  &none  &none    &none  &none  &none
+                        >;
+                };
+                mouse {
+// -----------------------------------------------------------------------------------------
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+//                                 | none | none | none |   | none | none  | none |
+                        bindings = <
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                        &none  &none  &none    &none  &none  &none
+                        >;
+                };
+                qwerty {
+// -----------------------------------------------------------------------------------------
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+//                                 | none | none | none |   | none | none  | none |
+                        bindings = <
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                        &none  &none  &none    &none  &none  &none
+                        >;
+                };
+                media {
+// -----------------------------------------------------------------------------------------
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+//                                 | none | none | none |   | none | none  | none |
+                        bindings = <
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                        &none  &none  &none    &none  &none  &none
+                        >;
+                };
+                functions {
+// -----------------------------------------------------------------------------------------
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+// |  none  |  none   |  none  |  none  |  none  | none |   |  none  |  none   |  none  |  none  |  none  | none |
+//                                 | none | none | none |   | none | none  | none |
+                        bindings = <
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
                         &none  &none  &none    &none  &none  &none
                         >;
                 };
