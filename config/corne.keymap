@@ -128,7 +128,7 @@
                         flavor = "tap-preferred";
                         bindings = <&mo>, <&kp>;
                 };
-                td_caps: tap_dance_caps {
+                tdc: tap_dance_caps {
                         compatible = "zmk,behavior-tap-dance";
                         label = "TAP_DANCE_CAPS";
                         #binding-cells = <0>;
@@ -148,7 +148,7 @@
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B                       &kp J &kp L  &kp U     &kp Y   &kp SQT    &kp BSPC
    &kp ESC &hm LSHFT A &hm LALT R &hm LCTRL S &hm LGUI T &kp G   &kp M &hm RGUI N  &hm RCTRL E  &hm RALT I   &hm RSHFT O &kp SEMI
-   &td_caps &kp Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &to QWT
+   &tdc &kp Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &to QWT
                   &clt FNC TAB &clt NUM ESC &clt NAV BSPC         &clt SYM SPACE &clt MED ENTER  &kp DEL
                         >;
                 };
@@ -213,7 +213,7 @@
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T                       &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp ESC &hm LSHFT A &hm LALT S &hm LCTRL D &hm LGUI F &kp G   &kp H &hm RGUI J  &hm RCTRL K  &hm RALT L   &hm RSHFT SEMI &kp SQT 
-   &td_caps &kp Z &kp X &kp C &kp V &kp B                       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &to DEF
+   &tdc &kp Z &kp X &kp C &kp V &kp B                       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &to DEF
                   &clt FNC SPACE &clt NUM ESC &clt NAV BSPC         &clt SYM SPACE &clt MED ENTER  &kp DEL
                         >;
                 };
